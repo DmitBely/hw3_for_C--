@@ -21,21 +21,16 @@ void PrintArray(int[] arr)
 
 void EvensQubed(int[] col)
 {
-    for (int i = 0; i < col.Length; i++)
-    {   
-        int j = 0;
-        int qubed = 0;
-        if (col[i] %2 == 0)
+    int i = 0;
+    while (i < col.Length)
+    {
+        if (col[i] % 2 == 0)
         {
-            qubed = col[i] * col[i] * col[i];
-            Console.WriteLine(qubed);
-            j++;
+            int cube = col[i] * col[i] * col[i];
+            Console.WriteLine($"Куб числа {col[i]} = {cube}");
         }
-        else{
-            j++;
-        }
+        i++;
     }
-    
 }
 
 Console.WriteLine("Введите количество цифр: ");
